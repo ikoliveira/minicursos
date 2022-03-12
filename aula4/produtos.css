@@ -1,5 +1,21 @@
 header {
     background-color: #bbbb;
+    padding: 20px 0
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+
+}
+
+nav {
+
+    position: absolute;
+    top: 110px;
+    right: 0;
+
 }
 
 nav li{
@@ -10,11 +26,90 @@ nav li{
 }
 
 nav a {
-
+    
     text-transform: uppercase;
     color: black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
+
+
+}
+
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}   
+
+.produtos{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0
+
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 4px solid black;
+    border-radius: 10px 40px 10px 40px;
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+    
+}
+
+.produtos li:hover h2{
+    font-size: 34px;
+}
+
+.produtos li:active {
+    border-color: green;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-legenda {
+
+    font-size: 18x;
+    font-weight: normal;
+
+}
+
+.produto-preco {
+
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+
+    text-align: center;
+    background: url("rodape.jpeg");
+    padding-bottom: 80px;
+
+}
+
+footer p {
+
+    margin: 20px;
+    padding-top: 40px;
+    font-size: larger;
+    font-weight: bold;
+    color: white
+    
+    
+
 
 }
