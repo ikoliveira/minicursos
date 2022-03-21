@@ -5,14 +5,16 @@ botao.addEventListener("click", function(event){
     var form = document.querySelector("#form-adiciona")
 
     var paciente = instanciaPaciente(form);
-
-    var pacienteTR = montaTr(paciente)
-    
-    var tabela = document.querySelector("#tabela-pacientes")
-    analisaDados(pacienteTR)
-    tabela.appendChild(pacienteTR)
+    adicionaPacienteNaTabela(paciente)
+        
     form.reset()
 })
+
+function adicionaPacienteNaTabela(paciente){
+    var pacienteTR = montaTr(paciente)
+    var tabela = document.querySelector("#tabela-pacientes")
+    tabela.appendChild(pacienteTR) 
+}
 
 function instanciaPaciente(form){
 

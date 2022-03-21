@@ -19,16 +19,19 @@ function analisaDados(paciente) {
     altmax = 3.0
     var peso = paciente.querySelector(".info-peso").textContent
     var altura = paciente.querySelector(".info-altura").textContent
-    if (peso >= pmax) {
+    if (peso >= pmax || peso < 0) {
         paciente.style.backgroundColor = "black"
         paciente.style.color = "white"
-        paciente.querySelector(".info-imc").textContent = "Peso Inválido"
-    } else if (altura >= altmax) {
+        alert("Peso Inválido")
+        return false
+    } else if (altura >= altmax || altura < 0) {
         paciente.style.color = "red"
-        paciente.querySelector(".info-imc").textContent = "Altura Inválida"
+        alert("Altura Inválida")
+        return false
     } else {
         var imc = calculaIMC(peso, altura);
         paciente.querySelector(".info-imc").textContent = imc;
+        return true
     }
 }
 
